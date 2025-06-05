@@ -12,7 +12,7 @@
       color: #dddddd;
     }
     header {
-      background-image: url('hero.jpg');
+      background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('hero.jpg');
       background-size: cover;
       background-position: center;
       text-align: center;
@@ -37,8 +37,21 @@
       max-width: 900px;
       margin: auto;
     }
-    h1, h2 {
+    h1 {
       color: #c19a6b;
+      font-size: 2.8rem;
+      text-shadow: 1px 1px 5px #000;
+    }
+    h2 {
+      color: #c19a6b;
+    }
+    header p {
+      font-style: italic;
+      color: #f6f6f6;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
     }
     .button {
       background-color: #c19a6b;
@@ -48,7 +61,7 @@
       border-radius: 8px;
       font-weight: bold;
       display: inline-block;
-      margin: 1rem 0;
+      margin: 1rem 0.5rem;
     }
     .socials img {
       width: 32px;
@@ -60,11 +73,32 @@
       text-align: center;
       padding: 2rem;
     }
+    .signup-strip {
+      background-color: #1e002b;
+      text-align: center;
+      padding: 2rem;
+    }
+    .signup-strip input[type=email] {
+      padding: 0.7rem;
+      border-radius: 5px;
+      border: none;
+      width: 250px;
+      margin-right: 1rem;
+    }
+    .signup-strip button {
+      padding: 0.7rem 1.5rem;
+      background-color: #c19a6b;
+      color: #2e003e;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <nav>
-    <a href="#home">Home</a>
+    <a href="#home"><img src="bad-logo.jpg" alt="Logo" style="height:40px; vertical-align: middle;"></a>
     <a href="#act">The Act</a>
     <a href="#workshops">Workshops</a>
     <a href="#newsroom">Newsroom</a>
@@ -75,13 +109,14 @@
 
   <header id="home">
     <h1>Black American Dignity Ministry</h1>
-    <p><em>"Where Faith Meets Justice and Black Dignity Is Non-Negotiable."</em></p>
+    <p>"Where Faith Meets Justice and Black Dignity Is Non-Negotiable."</p>
   </header>
 
   <section id="act">
     <h2>The BAD Justice Act</h2>
     <p>This federal framework protects Black Americans from hate, discrimination, and systemic injustice. Explore our bold, actionable policy designed to uphold dignity, safety, and justice for all.</p>
     <a href="bad-justice-act-2025.pdf" class="button" target="_blank">📜 Read the Full Act</a>
+    <a href="bad-justice-flyer.pdf" class="button" target="_blank">📄 Download the Flyer</a>
   </section>
 
   <section id="workshops">
@@ -97,6 +132,13 @@
   <section id="events">
     <h2>Events</h2>
     <p>In-person and virtual BAD Justice events will be posted here. Sign up for alerts and be part of the movement.</p>
+  </section>
+
+  <section class="signup-strip">
+    <h2>Stay in the Know</h2>
+    <p>Sign up for email alerts and updates from the movement:</p>
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
   </section>
 
   <section id="donate">
