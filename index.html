@@ -11,6 +11,7 @@
       background-color: #2e003e;
       color: #dddddd;
     }
+
     nav {
       background-color: #4b007a;
       display: flex;
@@ -19,39 +20,49 @@
       padding: 1rem;
       flex-wrap: wrap;
     }
+
     nav a {
       color: #f6f6f6;
       text-decoration: none;
       font-weight: bold;
     }
+
     header {
-      background-image: url('hero.jpg'); /* clean, bright image */
+      background-image: url('hero.jpg');
       background-size: cover;
       background-position: center;
       text-align: center;
       padding: 13rem 2rem 5rem 2rem;
       color: #f6f6f6;
     }
+
     h1 {
       color: #c19a6b;
       font-size: 2.8rem;
       text-shadow: 1px 1px 5px #000;
       margin-bottom: 1rem;
     }
-    header p {
+
+    .quote-overlay {
+      background-color: rgba(0, 0, 0, 0.25);
+      display: inline-block;
+      padding: 0.6rem 1rem;
+      border-radius: 10px;
       font-style: italic;
       font-size: 1.2rem;
       color: #ffffff;
-      margin-top: 0;
     }
+
     section {
       padding: 4rem 2rem;
       max-width: 900px;
       margin: auto;
     }
+
     h2 {
       color: #c19a6b;
     }
+
     .button {
       background-color: #c19a6b;
       color: #2e003e;
@@ -62,11 +73,13 @@
       display: inline-block;
       margin: 1rem 0.5rem;
     }
+
     .signup-strip {
       background-color: #1e002b;
       text-align: center;
       padding: 2rem;
     }
+
     .signup-strip input[type=email] {
       padding: 0.7rem;
       border-radius: 5px;
@@ -74,6 +87,7 @@
       width: 250px;
       margin-right: 1rem;
     }
+
     .signup-strip button {
       padding: 0.7rem 1.5rem;
       background-color: #c19a6b;
@@ -83,10 +97,12 @@
       font-weight: bold;
       cursor: pointer;
     }
+
     .socials img {
       width: 32px;
       margin: 0 0.5rem;
     }
+
     footer {
       background-color: #4b007a;
       color: #f6f6f6;
@@ -113,13 +129,9 @@
         text-shadow: 1px 1px 4px #000;
       }
 
-      header p {
+      .quote-overlay {
         font-size: 1rem !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
-        color: #f6f6f6 !important;
-        background: transparent !important;
-        display: inline-block;
+        padding: 0.5rem 1rem !important;
       }
     }
   </style>
@@ -137,7 +149,9 @@
 
   <header id="home">
     <h1>Black American Dignity Ministry</h1>
-    <p>"Where Faith Meets Justice and Black Dignity Is Non-Negotiable."</p>
+    <div class="quote-overlay">
+      "Where Faith Meets Justice and Black Dignity Is Non-Negotiable."
+    </div>
   </header>
 
   <section id="act">
