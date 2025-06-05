@@ -12,40 +12,22 @@
       color: #dddddd;
     }
     header {
-      background-image: url('hero.jpg');
+      background-image: url('your-hero-image.jpg');
       background-size: cover;
-      background-position: top center;
+      background-position: center;
       text-align: center;
-      padding: 10rem 2rem 8rem;
+      padding: 10rem 2rem;
       color: #f6f6f6;
-      position: relative;
     }
     nav {
       background-color: #4b007a;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.5rem 2rem;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 999;
-      flex-wrap: wrap;
-    }
-    .logo {
-      flex-shrink: 0;
-    }
-    .logo img {
-      height: 40px;
-    }
-    .nav-links {
-      display: flex;
       justify-content: center;
-      flex-grow: 1;
       gap: 2rem;
+      padding: 1rem;
       flex-wrap: wrap;
     }
-    .nav-links a {
+    nav a {
       color: #f6f6f6;
       text-decoration: none;
       font-weight: bold;
@@ -55,11 +37,7 @@
       max-width: 900px;
       margin: auto;
     }
-    h1 {
-      color: #c19a6b;
-      font-size: 2.8rem;
-    }
-    h2 {
+    h1, h2 {
       color: #c19a6b;
     }
     .button {
@@ -70,7 +48,7 @@
       border-radius: 8px;
       font-weight: bold;
       display: inline-block;
-      margin: 1rem 1rem 0 0;
+      margin: 1rem 0;
     }
     .socials img {
       width: 32px;
@@ -82,52 +60,17 @@
       text-align: center;
       padding: 2rem;
     }
-    .signup-strip {
-      background-color: #3a005c;
-      text-align: center;
-      padding: 2rem;
-      color: #ffffff;
-    }
-    .signup-strip input[type="email"] {
-      padding: 0.5rem;
-      border: none;
-      border-radius: 5px;
-      margin-right: 0.5rem;
-      width: 250px;
-      max-width: 90%;
-    }
-    .signup-strip button {
-      padding: 0.6rem 1.2rem;
-      background-color: #c19a6b;
-      color: #2e003e;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
-    }
-    @media (max-width: 768px) {
-      header {
-        padding: 8rem 1rem 6rem;
-      }
-      .nav-links {
-        justify-content: center;
-        margin-top: 0.5rem;
-      }
-    }
   </style>
 </head>
 <body>
   <nav>
-    <div class="logo">
-      <img src="bad-logo.jpg" alt="BAD Justice Logo">
-    </div>
-    <div class="nav-links">
-      <a href="#act">The Act</a>
-      <a href="#workshops">Workshops</a>
-      <a href="#newsroom">Newsroom</a>
-      <a href="#events">Events</a>
-      <a href="#donate">Donate</a>
-      <a href="#contact">Contact</a>
-    </div>
+    <a href="#home">Home</a>
+    <a href="#act">The Act</a>
+    <a href="#workshops">Workshops</a>
+    <a href="#newsroom">Newsroom</a>
+    <a href="#events">Events</a>
+    <a href="#donate">Donate</a>
+    <a href="#contact">Contact</a>
   </nav>
 
   <header id="home">
@@ -139,7 +82,6 @@
     <h2>The BAD Justice Act</h2>
     <p>This federal framework protects Black Americans from hate, discrimination, and systemic injustice. Explore our bold, actionable policy designed to uphold dignity, safety, and justice for all.</p>
     <a href="bad-justice-act-2025.pdf" class="button" target="_blank">📜 Read the Full Act</a>
-    <a href="bad-justice-flyer.pdf" class="button" target="_blank">📄 Download the Flyer</a>
   </section>
 
   <section id="workshops">
@@ -156,15 +98,6 @@
     <h2>Events</h2>
     <p>In-person and virtual BAD Justice events will be posted here. Sign up for alerts and be part of the movement.</p>
   </section>
-
-  <div class="signup-strip">
-    <h2>Stay Informed</h2>
-    <p>Sign up to receive email alerts about our latest workshops, events, and updates.</p>
-    <form action="#" method="POST">
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit">Sign Up</button>
-    </form>
-  </div>
 
   <section id="donate">
     <h2>Support the Movement</h2>
