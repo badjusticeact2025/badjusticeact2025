@@ -13,26 +13,32 @@
     }
 
     nav {
-      background-color: #4b007a;
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      padding: 1rem;
-      flex-wrap: wrap;
       position: fixed;
       width: 100%;
       top: 0;
-      z-index: 1000;
+      background-color: #4b007a;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      z-index: 999;
     }
 
-    nav img {
+    .nav-logo {
       height: 40px;
     }
 
-    nav a {
-      color: #f6f6f6;
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #ffffff;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1rem;
     }
 
     header {
@@ -40,21 +46,21 @@
       background-size: cover;
       background-position: center;
       text-align: center;
-      padding: 14rem 2rem 6rem;
-      color: #fff;
+      padding: 10rem 2rem 6rem;
+      color: #f6f6f6;
     }
 
     header h1 {
-      font-size: 2.8rem;
-      color: #ffc94c;
-      text-shadow: 2px 2px 4px #000;
+      color: #c19a6b;
+      font-size: 3rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+      margin-bottom: 0.5rem;
     }
 
     header p {
       font-size: 1.2rem;
-      font-style: italic;
-      color: #f6f6f6;
-      text-shadow: 1px 1px 2px #000;
+      color: #ffffff;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
     }
 
     section {
@@ -63,7 +69,7 @@
       margin: auto;
     }
 
-    h1, h2 {
+    h2 {
       color: #c19a6b;
     }
 
@@ -75,73 +81,80 @@
       border-radius: 8px;
       font-weight: bold;
       display: inline-block;
-      margin: 1rem 0;
+      margin: 1rem 1rem 1rem 0;
     }
 
-    .socials img {
-      width: 32px;
-      margin: 0 0.5rem;
-    }
-
-    footer {
+    .signup-strip {
       background-color: #4b007a;
-      color: #f6f6f6;
       text-align: center;
       padding: 2rem;
     }
 
-    .signup {
-      background-color: #3a004f;
-      text-align: center;
-      padding: 3rem 2rem;
-    }
-
-    .signup input[type="email"] {
+    .signup-strip input[type="email"] {
       padding: 0.75rem;
-      width: 250px;
-      border: none;
       border-radius: 5px;
-      margin-right: 0.5rem;
+      border: none;
+      width: 250px;
+      margin-right: 1rem;
     }
 
-    .signup button {
+    .signup-strip button {
       padding: 0.75rem 1.5rem;
       background-color: #c19a6b;
       color: #2e003e;
-      font-weight: bold;
       border: none;
       border-radius: 5px;
+      font-weight: bold;
       cursor: pointer;
     }
 
-    section:first-of-type {
-      padding-top: 8rem;
+    footer {
+      background-color: #2e003e;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .socials img {
+      width: 28px;
+      margin: 0 0.5rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-end;
+      }
     }
   </style>
 </head>
 <body>
+
   <nav>
-    <a href="#home" style="margin-right:auto;">
-      <img src="bad-logo.jpg" alt="BAD Justice Logo">
-    </a>
-    <a href="#act">The Act</a>
-    <a href="#workshops">Workshops</a>
-    <a href="#newsroom">Newsroom</a>
-    <a href="#events">Events</a>
-    <a href="#donate">Donate</a>
-    <a href="#contact">Contact</a>
+    <img src="bad-logo.jpg" alt="Logo" class="nav-logo" />
+    <div class="nav-links">
+      <a href="#act">The Act</a>
+      <a href="#workshops">Workshops</a>
+      <a href="#newsroom">Newsroom</a>
+      <a href="#events">Events</a>
+      <a href="#donate">Donate</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
   <header id="home">
-    <h1>The BAD Justice Act</h1>
+    <h1>Black American Dignity Ministry</h1>
     <p>"Where Faith Meets Justice and Black Dignity Is Non-Negotiable."</p>
-    <a href="bad-justice-act-2025.pdf" class="button" target="_blank">📜 Read the Full Act</a>
   </header>
 
   <section id="act">
     <h2>The BAD Justice Act</h2>
     <p>This federal framework protects Black Americans from hate, discrimination, and systemic injustice. Explore our bold, actionable policy designed to uphold dignity, safety, and justice for all.</p>
-    <a href="bad-justice-act-2025.pdf" class="button" target="_blank">📜 Read the Full Act</a><br />
+    <a href="bad-justice-act-2025.pdf" class="button" target="_blank">📜 Read the Full Act</a>
     <a href="bad-justice-flyer.pdf" class="button" target="_blank">📄 Download the Flyer</a>
   </section>
 
@@ -171,13 +184,11 @@
     <p>Email: <a href="mailto:info@badjusticeact2025.org">info@badjusticeact2025.org</a></p>
   </section>
 
-  <div class="signup">
-    <h2>Stay in the Know</h2>
-    <p>Sign up to get the latest news, programs, and action alerts from the BAD Justice Act.</p>
-    <form>
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit">Sign Up</button>
-    </form>
+  <div class="signup-strip">
+    <h3>Stay Updated</h3>
+    <p>Enter your email to receive updates, alerts, and invitations.</p>
+    <input type="email" placeholder="Your Email Address" />
+    <button type="submit">Subscribe</button>
   </div>
 
   <footer>
@@ -190,5 +201,6 @@
       <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
     </div>
   </footer>
+
 </body>
 </html>
